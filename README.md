@@ -1,6 +1,6 @@
 # Rails Claude Kit
 
-A zero-configuration, opinionated set of Claude Code agents, skills, and commands for modern Rails development. Install once, start building immediately.
+A zero-configuration, opinionated set of Claude Code agents and skills for modern Rails development. Install once, start building immediately.
 
 ## Philosophy
 
@@ -26,7 +26,7 @@ Open Claude Code in your Rails project and tell it to install from the repo URL:
 Install rails claude kit from https://github.com/dchuk/rails_ai_agents
 ```
 
-Claude will clone the repo, copy `.claude/` into your project, and merge `CLAUDE_TEMPLATE.md` into your `CLAUDE.md`. That's it — all 18 agents, 23 skills, and 2 commands are ready to use.
+Claude will clone the repo, copy `.claude/` into your project, and merge `CLAUDE_TEMPLATE.md` into your `CLAUDE.md`. That's it — all 18 agents and 23 skills are ready to use.
 
 This also works with a local path if you've already cloned the repo:
 
@@ -52,7 +52,7 @@ cp /tmp/rails-claude-kit/CLAUDE_TEMPLATE.md /path/to/your-rails-project/
 
 ### What the install does
 
-1. Copies `.claude/agents/`, `.claude/skills/`, `.claude/commands/`, `.claude/hooks/` into your project
+1. Copies `.claude/agents/`, `.claude/skills/`, `.claude/hooks/` into your project
 2. Merges `CLAUDE_TEMPLATE.md` conventions into your existing `CLAUDE.md` (or creates a new one)
 3. Merges `.claude/settings.json` permissions with any existing settings
 4. Does **not** overwrite existing files — merges safely
@@ -113,13 +113,6 @@ Deep knowledge modules with patterns and examples:
 | `i18n-patterns` | Internationalization patterns |
 | `active-storage-setup` | Active Storage configuration |
 | `install` | Install this kit into a Rails project |
-
-### 2 Commands
-
-| Command | Purpose |
-|---------|---------|
-| `frame-problem` | Challenge stakeholder requests to identify real needs |
-| `refine-specification` | Refine feature specifications with structured Q&A |
 
 ### Security
 
