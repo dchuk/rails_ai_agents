@@ -18,23 +18,27 @@ This kit follows a **hybrid Rails philosophy** — combining the best of 37signa
 
 ## Installation
 
-### Option 1: Tell Claude Code to install it
+### Option 1: Claude Code (recommended)
+
+Open Claude Code in your Rails project and tell it to install from the repo URL:
 
 ```
-Install rails development agents from /path/to/rails_ai_agents
+Install rails claude kit from https://github.com/dchuk/rails_ai_agents
 ```
 
-Or use the install skill after manual setup:
+Claude will clone the repo, copy `.claude/` into your project, and merge `CLAUDE_TEMPLATE.md` into your `CLAUDE.md`. That's it — all 18 agents, 23 skills, and 2 commands are ready to use.
+
+This also works with a local path if you've already cloned the repo:
 
 ```
-/install
+Install rails claude kit from ~/code/rails_ai_agents
 ```
 
 ### Option 2: Manual installation
 
 ```bash
-# Clone or copy the repo
-git clone <repo-url> /tmp/rails-claude-kit
+# Clone the repo
+git clone https://github.com/dchuk/rails_ai_agents.git /tmp/rails-claude-kit
 
 # Copy .claude/ directory into your Rails project
 cp -r /tmp/rails-claude-kit/.claude/ /path/to/your-rails-project/.claude/
@@ -45,6 +49,13 @@ cp /tmp/rails-claude-kit/CLAUDE_TEMPLATE.md /path/to/your-rails-project/
 # Merge CLAUDE_TEMPLATE.md into your existing CLAUDE.md
 # (or rename it to CLAUDE.md if you don't have one)
 ```
+
+### What the install does
+
+1. Copies `.claude/agents/`, `.claude/skills/`, `.claude/commands/`, `.claude/hooks/` into your project
+2. Merges `CLAUDE_TEMPLATE.md` conventions into your existing `CLAUDE.md` (or creates a new one)
+3. Merges `.claude/settings.json` permissions with any existing settings
+4. Does **not** overwrite existing files — merges safely
 
 ## What's Included
 
